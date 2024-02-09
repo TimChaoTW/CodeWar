@@ -1,5 +1,4 @@
 def maskify(cc)
-  # num = cc.split('')
   if cc.length > 4
     "#" * (cc.length - 4) + cc[-4..-1]
   else
