@@ -1,11 +1,7 @@
 def sequence_sum(begin_number, end_number, step)
   return 0 if begin_number > end_number
 
-  sum = 0
-  (begin_number..end_number).step(step) do |n|
-    sum += n
-  end
-  sum
+  begin_number + sequence_sum(begin_number + step, end_number, step)
 end
 
 puts sequence_sum(1, 5, 1)
