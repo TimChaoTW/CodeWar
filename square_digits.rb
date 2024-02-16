@@ -1,10 +1,5 @@
 def square_digits num
-  num = num.to_s.split('')
-  array = []
-  (0..num.length - 1).step(1) do |n|
-    array << num [n].to_i ** 2
-  end
-  array.join.to_i
+  num.to_s.chars.map { |digit| digit.to_i**2 }.join.to_i
 end
 
 puts square_digits(3212) # 9414
